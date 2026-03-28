@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('join')}}">Join Us</a>
+        <a href="{{url_for('login')}}">Logout</a>
+    </div>
+    <div class="content">
+        <h1 class="contentText">About Me</h1>
+        <img src="images/profilePhoto.jpg" alt="Profile Picture"><br><br>
+        <b class="contentText">Name: </b>vishnusai<br>
+        <b class="contentText">Role: </b>student<br>
+        <b class="contentText">Email: </b>gvishnusai26@gmail.com<br>
+        <b class="contentText">Location: </b>Vadodara, Gujarat
+        <h2>Skills:</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Basic Javascript</li>
+    </ul>
+    </div>
+    <table border ='1'>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+        </tr>
+        {% for m in members %}
+        <tr>
+            <td>{{m.name}}</td>
+            <td>{{m.email}}</td>
+            <td>{{m.gender}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
