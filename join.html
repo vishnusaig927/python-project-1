@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('join')}}">Join Us</a>
+        <a href="{{url_for('login')}}">Logout</a>
+    </div>
+    <div class="content">
+        <h1>Join Us</h1>
+        <p>Please fill the form below to join us.</p>
+        <form method = "POST" class="contentText">
+            <label>Name: </label>
+            <input name = "name" type="text" placeholder="Enter the name" class="input">
+            <br>
+            <label>Email: </label>
+            <input name = "email"  type="email" placeholder="Enter the email" class="input">
+            <br>
+            <label>Gender: </label>
+            <input type="radio" name = "gender" value = "Male">Male
+            <input type="radio" name = "gender" value = "Female">Female
+            <br>
+           <button type="submit" class="btn">Submit</button>
+        </form>
+        <br>
+       
+    </div>
+</body>
+</html>
