@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="content">
+        <h1>Login</h1><br><br>
+
+       {% if errorMessage %}
+       <div>
+        {{ errorMessage }}
+       </div>
+       {% endif %}
+
+        <form method = "POST" class="contentText">
+
+            <label>Email: </label>
+            <input type="email" name = "email"><br><br>
+
+            <label>Password: </label>
+            <input type="password" name = "password"><br><br>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <p class="contentText">Don't have an account?</p>
+        <a href="{{url_for('signup')}}" class="contentText">Signup here</a><br><br>
+    </div>
+</body>
+</html>
